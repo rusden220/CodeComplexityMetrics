@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using ArchiMetrics;
+using ArchiMetrics.Analysis;
 
 namespace CodeComplexityMetrics
 {
@@ -20,6 +22,15 @@ namespace CodeComplexityMetrics
 	{
 		public IEnumerable<MetrixData> GetMetrixData(string solutionPath)
 		{
+			System.Diagnostics.Debug.WriteLine($"Load archMetrix for {solutionPath}");
+
+			//var solutionProvider = new SolutionProvider();
+			//var solution = await solutionProvider.Get(solutionPath);
+			//var projects = solution.Projects.ToList();
+			//var metricsCalculator = new CodeMetricsCalculator();
+			//var calculateTasks = projects.Select(p => metricsCalculator.Calculate(p, solution));
+			//var metrics = (Task.WhenAll(calculateTasks)).SelectMany(nm => nm);
+
 			return GetMetrixData_Plug(solutionPath);
 		}
 		/// <summary>
@@ -35,5 +46,7 @@ namespace CodeComplexityMetrics
 				new MetrixData("Metrix name 2", "20") 
 			};
 		}
+
+
 	}
 }

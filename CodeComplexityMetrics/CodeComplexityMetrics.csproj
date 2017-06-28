@@ -39,6 +39,14 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ArchiMetrics.Analysis">
+      <HintPath>..\..\ArchiMetrics\src\ArchiMetrics.Analysis\bin\Release\net452\ArchiMetrics.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchiMetrics.CodeReview.Rules">
+      <HintPath>..\..\ArchiMetrics\src\ArchiMetrics.CodeReview.Rules\bin\Release\net452\ArchiMetrics.CodeReview.Rules.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MonoDevelop.Addins.0.3.3\build\net40\MonoDevelop.Addins.targets" Condition="Exists('..\packages\MonoDevelop.Addins.0.3.3\build\net40\MonoDevelop.Addins.targets')" />
 </Project>
